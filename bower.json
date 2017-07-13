@@ -1,0 +1,22 @@
+{
+  "name": "backpain",
+  "homepage": "https://github.com/boontat/backpain",
+  "description": "playing backbone",
+  "main": "boner.html",
+  "authors": [
+    "mr.monk"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mustache.js": "mustache#^2.3.0",
+    "backbone": "^1.3.3",
+    "jquery": "^3.2.1"
+  }
+}
