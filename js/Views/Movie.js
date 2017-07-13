@@ -1,19 +1,15 @@
 MovieApp.Views.MovieView = Backbone.View.extend({
 
+  tagName: 'li',
+
   initialize: function(options){
-    this.list = options.list;
+    if (options.model) {
+      this.model = options.model;
+    }
   },
   render: function() {
 
-    for(var n in this.list.models){
-      var text = "<div class='name'>" +
-      this.list.models[n].attributes.name +
-      "</div><div class='year'>" +
-      this.list.models[n].attributes.year +
-      "</div>";
-
-      this.$el.append(text);
-    }
+    this.$el.html(this.model.attributes.Title+" ("+this.model.attributes.Year+")");
 
     return this;
   }

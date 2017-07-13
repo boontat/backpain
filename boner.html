@@ -5,40 +5,24 @@
         <meta charset="UTF8">
         <title>Backbonejs movie SPA</title>
 
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-        <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
-        <script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+        <script type="text/javascript" src="js/bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="js/bower_components/underscore/underscore.js"></script>
+        <script type="text/javascript" src="js/bower_components/backbone/backbone.js"></script>
 
     </head>
     <body>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#search">Search</a></li>
+        </ul>
         <div id="main"></div>
         <script src="js/App.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/Models/Movie.js" charset="utf-8"></script>
         <script src="js/Collections/Movies.js" charset="utf-8"></script>
-        <script src="js/Views/Movie.js" charset="utf-8"></script>
+        <script src="js/Views/Home.js" charset="utf-8"></script>
+        <script src="js/Views/Search.js" charset="utf-8"></script>
+        <script src="js/Router.js" type="text/javascript"></script>
         <script type="text/javascript" charset="utf-8">
-          var m1 = new MovieApp.Models.Movies({
-            name: "Iron Man",
-            year: 2000
-          });
-
-          var m2 = new MovieApp.Models.Movies({
-            name: "Avenger",
-            year: 2002
-          });
-
-          var m3 = new MovieApp.Models.Movies({
-            name: "Avenger 2",
-            year: 2005
-          });
-
-          var myMovies = new MovieApp.Collections.Movies([
-            m1, m2, m3
-          ]);
-
-          var movieView = new MovieApp.Views.MovieView({list: myMovies});
-          movieView.render();
-          $('#main').append(movieView.el);
         </script>
     </body>
 </html>

@@ -15,4 +15,5 @@ MovieApp.Router = Backbone.Router.extend({
         var view = new MovieApp.Views.Search();
         $('#main').html(view.render().el);
     }
+
 });
