@@ -9,7 +9,7 @@ MovieApp.Views.MovieView = Backbone.View.extend({
   },
   render: function() {
 
-    this.$el.html(this.model.attributes.Title+" ("+this.model.attributes.Year+")");
+    this.$el.html(this.model.attributes.title+" ("+this.model.attributes.id+")");
 
     return this;
   }

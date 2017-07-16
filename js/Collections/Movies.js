@@ -7,10 +7,10 @@ MovieApp.Collections.Movies = Backbone.Collection.extend({
   },
 
   url: function(){
-		return "http://www.omdapi.com/?s=" + this.title;
+		return "https://jsonplaceholder.typicode.com/albums";
 	},
 
-  parse: function(){
-		return response.search;
+  parse: function(response, optio){
+    return response;
 	}
 });
