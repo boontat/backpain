@@ -2,7 +2,7 @@ MovieApp.Collections.Movies = Backbone.Collection.extend({
 
   initialize: function(options){
   	if (options.title) {
-  		this.somethingelse = options.title;
+  		this.title = options.title;
   	}
   },
 
@@ -11,7 +11,7 @@ MovieApp.Collections.Movies = Backbone.Collection.extend({
 	},
 
   parse: function(response){
-    var toSearch = this.somethingelse;
+    var toSearch = this.title;
     if (!_.isEmpty(toSearch)) {
       var filtered = _.filter(response, function(obj){
         return ~obj.title.toLowerCase().indexOf(toSearch);
