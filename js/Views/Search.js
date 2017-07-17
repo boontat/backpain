@@ -2,8 +2,8 @@ MovieApp.Views.Search = Backbone.View.extend({
 
     initialize: function(options) {},
 
-    template: "<input type='text' placeholder='search'> \
-               <button>Search movie</button> \
+    template: "<input type='text'> \
+              <button>Fetch</button> \
                <ul id='movie-list'></ul>",
 
     render: function()
@@ -24,12 +24,16 @@ MovieApp.Views.Search = Backbone.View.extend({
     },
 
     rendermovies: function(movies) {
+      if (movies.length) {
         var movieview;
-
+        this.$el.find('#movie-list').html('');
         for (var n in movies.models) {
             movieview = new MovieApp.Views.MovieView({model: movies.models[n]});
 
             this.$el.find('#movie-list').append(movieview.render().el);
         }
+      }else{
+        this.$el.find('#movie-list').html('No Results...');
+      }
     }
 });
